@@ -1,14 +1,30 @@
 version: '3.8'
 
 services:
-  postgres:
-    container_name: postgis
+  postgres_db:
+    container_name: postgres_db
     image: postgis/postgis:16-3.4-alpine
     restart: always
     environment:
+      POSTGRES_DB: db_todolist
       POSTGRES_PASSWORD: smizc2024
       POSTGRES_USER: smizc
     volumes:
       - ./pgdata:/var/lib/postgresql/data
     ports:
       - 5432:5432
+
+  api:
+    build:
+      context: .
+    container_name: api-todolist
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres_db:5432/db_todolist
+      SPRING_DATASOURCE_USERNAME: smizc
+      SPRING_DATASOURCE_PASSWORD: smizc2024
+    depends_on:
+      - postgres_db
