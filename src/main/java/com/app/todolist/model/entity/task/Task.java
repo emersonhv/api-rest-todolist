@@ -40,13 +40,13 @@ public class Task implements Serializable {
     private User user;
 
     @PrePersist
-    public void prePersist(){
+    public void prePersist() {
         this.createDate = LocalDateTime.now();
         this.updateDate = LocalDateTime.now();
     }
 
     @PreUpdate
-    public void preUpdate(){
+    public void preUpdate() {
         this.updateDate = LocalDateTime.now();
     }
 }

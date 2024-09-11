@@ -1,6 +1,5 @@
 package com.app.todolist.model.dto;
 
-import com.app.todolist.model.entity.task.State;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
