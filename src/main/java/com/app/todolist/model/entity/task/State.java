@@ -31,7 +31,4 @@ public enum State {
 
     public static State findById(String id) { return ENUM_MAP_BY_CODE.get(id);}
 
-
-
-
 }

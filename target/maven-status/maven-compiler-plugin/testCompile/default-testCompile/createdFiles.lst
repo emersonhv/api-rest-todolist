@@ -1,1 +1,4 @@
-com\app\todolist\TodolistApplicationTests.class
+com\app\todolist\AuthServiceTest.class
+com\app\todolist\JwtServiceTest.class
+com\app\todolist\TaskServiceTest.class
+com\app\todolist\UserServiceTest.class

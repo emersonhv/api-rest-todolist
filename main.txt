@@ -1,0 +1,10 @@
+1. Run mvn run clean and mvn run install for build ./target folder
+
+2. Run next command for create imagen on docker with dockerfile
+    docker build -t api-todolist:1.0 .
+
+3. Run next command for build docker compose
+    docker-compose build
+
+4. Run next command for create de container from images
+    docker-compose up
